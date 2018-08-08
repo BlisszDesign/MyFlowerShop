@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Flower Shop</string>
+    <string name="empty_text_line1">The list is empty.</string>
+    <string name="empty_text_line2">Add flowers with add button.</string>
+    <string name="insert_demo">Insert demo data</string>
+    <string name="delete_all">Delete all data</string>
+</resources>

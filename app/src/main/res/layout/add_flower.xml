@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rose" />
+
+        <Spinner
+            android:id="@+id/category_name"
+            android:layout_width="120dp"
+            android:layout_height="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/quantity_layout"
+            android:background="@drawable/round_background"
+            android:fontFamily="@font/raleway"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/textDark"
+            android:textSize="@dimen/text_14" />
+
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button_save"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/round_background">
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background"
+                android:fontFamily="@font/raleway"
+                android:hint="5"
+                android:inputType="numberDecimal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/textDark"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/round_background"
+                android:fontFamily="@font/raleway"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:text="$"
+                android:textColor="@color/textDark"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quantity_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_background">
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background"
+                android:fontFamily="@font/raleway"
+                android:hint="5"
+                android:inputType="numberDecimal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/textDark"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/round_background"
+                android:fontFamily="@font/raleway"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:text="left in\nStock"
+                android:textColor="@color/textDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_and_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/quantity_layout"
+            android:background="@drawable/round_background"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background"
+                android:fontFamily="@font/greatvibes"
+                android:gravity="center_horizontal"
+                android:hint="Pink rose"
+                android:inputType="textCapWords"
+                android:textColor="@color/textDark"
+                android:textSize="@dimen/text_big" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_horizontal"
+                android:hint="Ez egy hosszabb szöveg, de nem tudom miért nem akarja középre helyezni."
+                android:inputType="textCapWords"
+                android:padding="5dp"
+                android:textColor="@color/textDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supplier_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/name_and_desc"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_background"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:id="@+id/supplier_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background">
+
+                <TextView
+                    android:id="@+id/supplier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/round_background"
+                    android:fontFamily="@font/raleway"
+                    android:padding="5dp"
+                    android:text="Supplier Name:"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/supplier_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/round_background"
+                    android:fontFamily="@font/raleway"
+                    android:hint="Virágszínpad Kft., Sárisáp"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/supplier_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background">
+
+                <TextView
+                    android:id="@+id/supplier_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/round_background"
+                    android:fontFamily="@font/raleway"
+                    android:padding="5dp"
+                    android:text="Supplier Phone:"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/supplier_phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/round_background"
+                    android:fontFamily="@font/raleway"
+                    android:hint="06203733135"
+                    android:inputType="phone"
+                    android:padding="5dp"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="101dp"
+            android:layout_height="53dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/supplier_info_layout"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_shape"
+            android:fontFamily="@font/raleway"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/textLight"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

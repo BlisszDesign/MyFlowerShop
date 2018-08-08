@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_flower_type">
+        <item>Calla</item>
+        <item>Rose</item>
+        <item>Orchids</item>
+        <item>Wedding boquet</item>
+        <item>Romantic boquet</item>
+    </string-array>
+</resources>

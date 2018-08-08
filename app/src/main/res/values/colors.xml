@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#866ba8</color>
+    <color name="colorPrimaryDark">#db8</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#ebcee2</color>
+    <color name="menu">#866ba8</color>
+    <color name="productBackground">#dc9698</color>
+    <color name="textLight">#faf9fa</color>
+    <color name="textDark">#000000</color>
+    <color name="hint">#898770</color>
+</resources>
