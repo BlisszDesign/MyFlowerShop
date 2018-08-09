@@ -97,7 +97,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
 
         Uri insertDemoUri = getContentResolver().insert(FlowersContract.FlowersEntry.CONTENT_URI, values);
     }
-   
+
 
     private void deleteAllData() {
         int deleteAll = getContentResolver().delete(FlowersContract.FlowersEntry.CONTENT_URI,null,null);
