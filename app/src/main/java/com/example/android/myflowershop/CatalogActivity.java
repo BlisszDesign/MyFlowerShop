@@ -46,12 +46,11 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
         View emptyView = findViewById(R.id.empty_view);
         flowerListView.setEmptyView(emptyView);
 
-
         mFlowersAdapter = new FlowersAdapter(this, null);
         flowerListView.setAdapter(mFlowersAdapter);
         flowerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = new Intent(CatalogActivity.this, DetailActivity.class);
                 Uri uri = ContentUris.withAppendedId(FlowersContract.FlowersEntry.CONTENT_URI, id);
                 intent.setData(uri);
@@ -97,7 +96,6 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
 
         Uri insertDemoUri = getContentResolver().insert(FlowersContract.FlowersEntry.CONTENT_URI, values);
     }
-
 
     private void deleteAllData() {
         int deleteAll = getContentResolver().delete(FlowersContract.FlowersEntry.CONTENT_URI,null,null);

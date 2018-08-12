@@ -138,13 +138,14 @@
 
             <EditText
                 android:id="@+id/description"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round_background"
                 android:fontFamily="@font/raleway"
                 android:gravity="center_horizontal"
                 android:hint="Ez egy hosszabb szöveg, de nem tudom miért nem akarja középre helyezni."
-                android:inputType="textCapWords"
+                android:inputType="textMultiLine"
                 android:padding="5dp"
                 android:textColor="@color/textDark"
                 android:textSize="14sp" />

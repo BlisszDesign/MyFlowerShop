@@ -97,6 +97,15 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         saveFlower.setOnClickListener(buttonListener);
 
+        flowerCategorySpinner.setOnTouchListener(mTouchListener);
+        flowerPriceEditText.setOnTouchListener(mTouchListener);
+        flowerQuantityEditText.setOnTouchListener(mTouchListener);
+        flowerNameEditText.setOnTouchListener(mTouchListener);
+        flowerDescEditText.setOnTouchListener(mTouchListener);
+        supplierNameEditText.setOnTouchListener(mTouchListener);
+        supplierPhoneEditText.setOnTouchListener(mTouchListener);
+        saveFlower.setOnTouchListener(mTouchListener);
+
         setupSpinner();
 
     }
@@ -282,6 +291,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             if (newFlowerUri == null) {
                 Toast.makeText(this, "Error with saving flower. All data must be provided.", Toast.LENGTH_SHORT).show();
             } else {
+                Intent intent = new Intent(EditorActivity.this, CatalogActivity.class);
+                intent.setData(mCurrentFlower);
+                startActivity(intent);
                 Toast.makeText(this, "Flower saved", Toast.LENGTH_SHORT).show();
             }
         } else {

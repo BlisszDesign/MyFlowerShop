@@ -52,11 +52,11 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         final Intent intent = getIntent();
         mCurrentFlower = intent.getData();
 
-        flowerImage = (ImageView) findViewById(R.id.flower_image);
+        flowerImage = (ImageView) findViewById(R.id.image);
         flowerCategory = (TextView) findViewById(R.id.category_name);
         flowerPrice = (TextView) findViewById(R.id.price);
         flowerQuantity = (TextView) findViewById(R.id.quantity);
-        flowerName = (TextView) findViewById(R.id.flower_name);
+        flowerName = (TextView) findViewById(R.id.product_name);
         flowerDescription = (TextView) findViewById(R.id.description);
         supplierNameTV = (TextView) findViewById(R.id.supplier_name);
         supplierPhoneTV = (TextView) findViewById(R.id.supplier_phonenumber);
