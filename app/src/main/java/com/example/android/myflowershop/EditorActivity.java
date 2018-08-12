@@ -68,12 +68,12 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         if (mCurrentFlower == null) {
 
-            setTitle("Add new flower");
+            setTitle(R.string.editor_add_flower);
 
             invalidateOptionsMenu();
         } else {
 
-            setTitle("Edit flower");
+            setTitle(R.string.editor_edit_flower);
             getSupportLoaderManager().initLoader(EXISTING_PRODUCT_LOADER, null, this);
 //
         }
@@ -104,7 +104,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         flowerDescEditText.setOnTouchListener(mTouchListener);
         supplierNameEditText.setOnTouchListener(mTouchListener);
         supplierPhoneEditText.setOnTouchListener(mTouchListener);
-        saveFlower.setOnTouchListener(mTouchListener);
 
         setupSpinner();
 
@@ -190,9 +189,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             DialogInterface.OnClickListener discardButtonClickListener) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Discard your changes?");
-        builder.setPositiveButton("Discard", discardButtonClickListener);
-        builder.setNegativeButton("Keep editing", new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.unsaved_message);
+        builder.setPositiveButton(R.string.button_discard, discardButtonClickListener);
+        builder.setNegativeButton(R.string.button_keep_editing, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
                 if (dialog != null) {
@@ -289,24 +288,24 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             Uri newFlowerUri = getContentResolver().insert(FlowersContract.FlowersEntry.CONTENT_URI, values);
 
             if (newFlowerUri == null) {
-                Toast.makeText(this, "Error with saving flower. All data must be provided.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.message_error_saving, Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent(EditorActivity.this, CatalogActivity.class);
                 intent.setData(mCurrentFlower);
                 startActivity(intent);
-                Toast.makeText(this, "Flower saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.message_saved, Toast.LENGTH_SHORT).show();
             }
         } else {
             int updatedRows = getContentResolver().update(mCurrentFlower, values, null, null);
 
             if (updatedRows == 0) {
-                Toast.makeText(this, "Error with updating flower. All data must be provided", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.message_error_updating, Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent(EditorActivity.this, CatalogActivity.class);
                 intent.setData(mCurrentFlower);
                 startActivity(intent);
 
-                Toast.makeText(this, "Flower updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.message_updated, Toast.LENGTH_SHORT).show();
             }
                     }
     }
@@ -351,12 +350,12 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     private void insertDemoFlower() {
         ContentValues values = new ContentValues();
         values.put(FlowersContract.FlowersEntry.COLUMN_FLOWERS_TYPE, FlowersContract.FlowersEntry.TYPE_ROMANTIC);
-        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_NAME, "Bouquet for birthday");
-        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_DESCRIPTION, "Romantic bouquet for birthday. It is made of white and red roses and lilies.");
+        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_NAME, R.string.demo_name);
+        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_DESCRIPTION, R.string.demo_desc);
         values.put(FlowersContract.FlowersEntry.COLUMN_PRICE, 13);
         values.put(FlowersContract.FlowersEntry.COLUMN_QUANTITY, 6);
-        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_NAME, "Flower Party");
-        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_PHONE_NUMBER, "06203733135");
+        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_NAME, R.string.demo_supplier_name);
+        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_PHONE_NUMBER, R.string.demo_supplier_phone);
 
         Uri insertDemoUri = getContentResolver().insert(FlowersContract.FlowersEntry.CONTENT_URI, values);
     }

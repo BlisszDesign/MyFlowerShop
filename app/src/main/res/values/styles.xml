@@ -27,7 +27,7 @@
 
     <style name="ProductName">
         <item name="android:textColor">@color/textLight</item>
-        <item name="android:textSize">@dimen/text_24</item>
+        <item name="android:textSize">@dimen/text_normal</item>
         <item name="android:background">@drawable/round_shape</item>
         <item name="android:paddingLeft">@dimen/text_padding</item>
         <item name="android:paddingRight">@dimen/text_padding</item>

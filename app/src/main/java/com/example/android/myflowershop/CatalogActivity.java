@@ -87,12 +87,12 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
     private void insertDemoFlower() {
         ContentValues values = new ContentValues();
         values.put(FlowersContract.FlowersEntry.COLUMN_FLOWERS_TYPE, FlowersContract.FlowersEntry.TYPE_ROMANTIC);
-        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_NAME, "Bouquet for birthday");
-        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_DESCRIPTION, "Romantic bouquet for birthday. It is made of white and red roses and lilies.");
+        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_NAME, R.string.demo_name);
+        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_DESCRIPTION, R.string.demo_desc);
         values.put(FlowersContract.FlowersEntry.COLUMN_PRICE, 13);
         values.put(FlowersContract.FlowersEntry.COLUMN_QUANTITY, 6);
-        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_NAME, "Flower Party");
-        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_PHONE_NUMBER, "06203733135");
+        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_NAME, R.string.demo_supplier_name);
+        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_PHONE_NUMBER, R.string.demo_supplier_phone);
 
         Uri insertDemoUri = getContentResolver().insert(FlowersContract.FlowersEntry.CONTENT_URI, values);
     }
@@ -100,9 +100,9 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
     private void deleteAllData() {
         int deleteAll = getContentResolver().delete(FlowersContract.FlowersEntry.CONTENT_URI,null,null);
         if (deleteAll > 0) {
-            Toast.makeText(this, "All flowers succesfully deleted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_delete_message, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Looks like there was nothing flower to delete", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.nothing_delete, Toast.LENGTH_SHORT).show();
         }
     }
 

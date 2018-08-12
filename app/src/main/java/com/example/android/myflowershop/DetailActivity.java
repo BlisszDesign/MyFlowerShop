@@ -183,9 +183,9 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         if (mCurrentFlower != null) {
             int rowsDeleted = getContentResolver().delete(mCurrentFlower, null, null);
             if (rowsDeleted == 0) {
-                Toast.makeText(this, "Delete failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.delete_failed, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Delete successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.delete_successful, Toast.LENGTH_SHORT).show();
             }
         }
         finish();
@@ -193,15 +193,15 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
     private void showDeleteDialog () {
         AlertDialog.Builder deleteBuilder = new AlertDialog.Builder(this);
-        deleteBuilder.setMessage("Delete this flower?");
-        deleteBuilder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+        deleteBuilder.setMessage(R.string.delete_dialog_message);
+        deleteBuilder.setPositiveButton(R.string.button_delete, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 deleteFlower();
             }
         });
 
-        deleteBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        deleteBuilder.setNegativeButton(R.string.button_cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (dialog != null) {

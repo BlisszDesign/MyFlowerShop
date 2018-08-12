@@ -53,10 +53,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="29dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="@dimen/floating_button_margin_bottom"
+        android:layout_marginEnd="@dimen/floating_button_margin_end"
         android:background="@android:color/transparent"
         android:scaleType="centerCrop"
-        android:src="@drawable/bouquet" />
+        android:src="@drawable/bouquet"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/floating_button_margin_end" />
 
 </RelativeLayout>
