@@ -26,11 +26,9 @@ public class FlowersAdapter extends CursorAdapter {
     TextView priceNumber;
     TextView dollar;
 
-//    private View.OnClickListener mButtonListener;
 
     public FlowersAdapter (Context context, Cursor cursor){
         super(context, cursor, 0);
-//        this.mButtonListener = buttonListener;
     }
 
     @Override

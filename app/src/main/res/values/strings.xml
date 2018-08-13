@@ -37,4 +37,5 @@
     <string name="hint_name">Pink Rose</string>
     <string name="hint_desc">Cupcake ipsum dolor sit amet. Danish gingerbread donut liquorice bonbon chocolate bar apple pie sweet roll sweet.</string>
     <string name="button_save">Save</string>
+    <string name="toast">Flower requires all information before saving</string>
 </resources>

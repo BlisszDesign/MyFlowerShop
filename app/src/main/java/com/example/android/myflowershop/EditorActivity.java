@@ -177,7 +177,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 break;
         }
 
-//        inStock = quantity;
     }
 
     @Override
@@ -263,11 +262,12 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         int quantity = 0;
 
-        if (mCurrentFlower == null &&
-                TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) &&
-                TextUtils.isEmpty(supplierName) && TextUtils.isEmpty(phone) &&
-                TextUtils.isEmpty(priceString) && TextUtils.isEmpty(quantityString) &&
+        if (mCurrentFlower == null ||
+                TextUtils.isEmpty(name) || TextUtils.isEmpty(desc) ||
+                TextUtils.isEmpty(supplierName) || TextUtils.isEmpty(phone) ||
+                TextUtils.isEmpty(priceString) || TextUtils.isEmpty(quantityString) ||
                 mType == FlowersContract.FlowersEntry.TYPE_CALLA) {
+            Toast.makeText(this, R.string.toast, Toast.LENGTH_SHORT).show();
             return;
         }
 
