@@ -4,10 +4,6 @@
     <string name="empty_text_line2">Add flowers with add button.</string>
     <string name="insert_demo">Insert demo data</string>
     <string name="delete_all">Delete all data</string>
-    <string name="demo_name">Bouquet for birthday</string>
-    <string name="demo_desc">Romantic bouquet for birthday. It is made of white and red roses and lilies.</string>
-    <string name="demo_supplier_name">Flower Party Kft.</string>
-    <string name="demo_supplier_phone">06203733135</string>
     <string name="all_delete_message">All flowers successfully deleted</string>
     <string name="nothing_delete">Looks like there was nothing flower to delete</string>
     <string name="delete_failed">Delete failed</string>
@@ -37,5 +33,5 @@
     <string name="hint_name">Pink Rose</string>
     <string name="hint_desc">Cupcake ipsum dolor sit amet. Danish gingerbread donut liquorice bonbon chocolate bar apple pie sweet roll sweet.</string>
     <string name="button_save">Save</string>
-    <string name="toast">Flower requires all information before saving</string>
+    <string name="toast">Flower requires all information be</string>
 </resources>

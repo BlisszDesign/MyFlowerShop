@@ -75,7 +75,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
             setTitle(R.string.editor_edit_flower);
             getSupportLoaderManager().initLoader(EXISTING_PRODUCT_LOADER, null, this);
-//
         }
 
         flowerImage = findViewById(R.id.image);
@@ -262,7 +261,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         int quantity = 0;
 
-        if (mCurrentFlower == null ||
+        if (mCurrentFlower == null &&
                 TextUtils.isEmpty(name) || TextUtils.isEmpty(desc) ||
                 TextUtils.isEmpty(supplierName) || TextUtils.isEmpty(phone) ||
                 TextUtils.isEmpty(priceString) || TextUtils.isEmpty(quantityString) ||
@@ -350,12 +349,12 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     private void insertDemoFlower() {
         ContentValues values = new ContentValues();
         values.put(FlowersContract.FlowersEntry.COLUMN_FLOWERS_TYPE, FlowersContract.FlowersEntry.TYPE_ROMANTIC);
-        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_NAME, R.string.demo_name);
-        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_DESCRIPTION, R.string.demo_desc);
+        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_NAME, "Bouquet for birthday");
+        values.put(FlowersContract.FlowersEntry.COLUMN_PRODUCT_DESCRIPTION, "Romantic bouquet for birthday. It is made of white and red roses and lilies.");
         values.put(FlowersContract.FlowersEntry.COLUMN_PRICE, 13);
         values.put(FlowersContract.FlowersEntry.COLUMN_QUANTITY, 6);
-        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_NAME, R.string.demo_supplier_name);
-        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_PHONE_NUMBER, R.string.demo_supplier_phone);
+        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_NAME, "Flower Party Kft.");
+        values.put(FlowersContract.FlowersEntry.COLUMN_SUPPLIER_PHONE_NUMBER, "06203733135");
 
         Uri insertDemoUri = getContentResolver().insert(FlowersContract.FlowersEntry.CONTENT_URI, values);
     }
